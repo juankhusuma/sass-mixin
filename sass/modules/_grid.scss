@@ -1,0 +1,14 @@
+@mixin grid($cols-sm, $cols-md, $cols-lg, $gap) {
+  display: grid;
+  @media only screen and (min-width: 200px) {
+    grid-template-columns: repeat($cols-sm, 1fr);
+  }
+  @media only screen and (min-width: 480px) {
+    grid-template-columns: repeat($cols-md, 1fr);
+  }
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat($cols-lg, 1fr);
+  }
+
+  gap: $gap;
+}
