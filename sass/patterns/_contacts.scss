@@ -1,0 +1,47 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  background-color: var(--color-secondary);
+}
+
+.contact__title {
+  margin-bottom: 0.5rem;
+}
+
+.contact__image {
+  aspect-ratio: 16/9;
+  background-color: var(--color-secondary);
+  background-image: url("../images/sign-up.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1333333333);
+}
+
+.form-unit.full {
+  grid-column: 1/-1;
+}
+
+@media only screen and (min-width: 45em) {
+  .contact__wrap {
+    --cols: 3;
+  }
+  .contact__form {
+    grid-column: span 2;
+    padding: 3rem;
+    --cols: 2;
+  }
+  .contact__image {
+    aspect-ratio: auto;
+  }
+}
+@media only screen and (min-width: 60em) {
+  .contact__wrap {
+    --cols: 2;
+  }
+  .contact__form {
+    grid-column: span 1;
+  }
+}
